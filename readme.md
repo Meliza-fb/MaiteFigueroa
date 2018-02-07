@@ -1,4 +1,8 @@
 # Portafolio
 
 ## Paleta de colores 'Opciones':
-[carpeta](img/pastel.png)
+[1-Pastel](img/pastel.png)
+[2-Pastel Oscuro](img/pastelOscuro.jpg)
+[3-Deep Lake](img/deepLake.jpg)
+
+#Sketch
