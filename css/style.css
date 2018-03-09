@@ -1,0 +1,494 @@
+/*===========================================
+              S C R O L L
+=============================================*/
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+section::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 80%;
+  background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+  background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+}
+section h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font : normal 300 64px/1 'Josefin Sans', sans-serif;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/*#section01 { background: url('../img/ejemplo.jpg') center center / cover no-repeat;}*/
+#section02 { background: url(https://www.nxworld.net/example/css-scroll-down-button/bg02.jpg) center center / cover no-repeat;}
+#section03 { background: url(https://www.nxworld.net/example/css-scroll-down-button/bg03.jpg) center center / cover no-repeat;}
+#section04 { background: url(https://www.nxworld.net/example/css-scroll-down-button/bg04.jpg) center center / cover no-repeat;}
+
+#thanks {
+  background-color: #fff;
+}
+#thanks::after {
+  content: none;
+}
+#thanks div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#thanks h2 {
+  margin-bottom: 60px;
+  color: #333;
+  font : normal 300 64px/1 'Josefin Sans', sans-serif;
+  text-align: center;
+  white-space: nowrap;
+}
+#thanks p {
+  color: #333;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+}
+#thanks p a {
+  color: #333;
+  text-decoration: none;
+  transition: color .3s;
+}
+#thanks p a:hover {
+  color: #888;
+}
+.demo a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.demo a:hover {
+  opacity: .5;
+}
+
+
+
+#section01 a {
+  padding-top: 60px;
+}
+#section01 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+
+
+
+#section02 a {
+  padding-top: 60px;
+}
+#section02 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+#section02 a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+
+
+
+#section03 a {
+  padding-top: 60px;
+}
+#section03 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+#section03 a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+#section03 a span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: sdb03 3s infinite;
+  animation: sdb03 3s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/*============================================
+              M E N U
+==============================================*/
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #F8EDD1;
+  color: #fff;
+}
+body * {
+  box-sizing: border-box;
+}
+.icon {
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.hamburger {
+  content: ' ';
+  position: relative;
+  width: 20px;
+  border: 2px solid #fa8072;/*salmon*/
+  border-radius: 5px;
+  transition: all 0.333333333333333s ease;
+}
+.hamburger:after,
+.hamburger:before {
+  content: ' ';
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  border: 2px solid salmon;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  transition-property: top, bottom, transform;
+  transition-duration: 1s, 1s, 0.25s;
+}
+.hamburger:after {
+  top: -8px;
+}
+.hamburger:before {
+  bottom: -8px;
+}
+.menu {
+  pointer-events: none;
+}
+.menu--circle {
+  position: absolute;
+  z-index: 13;
+  width: 243.33333333333334px;
+  height: 243.33333333333334px;
+  background-color: #F8EDD1;/*crema*/
+  overflow: hidden;
+}
+.menu__active {
+  position: relative;
+}
+.menu__toggle {
+  z-index: 11;
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 200px;
+  height: 200px;
+  background-color: #9D9D93;/*gris*/
+  border-radius: 50%;
+  transition: transform 1.3s;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.menu__listings {
+  z-index: 10;
+  position: absolute;
+  top: -200px;
+  left: -200px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  transform: scale(0.1) rotate(150deg);
+  transition: transform 1s;
+}
+.menu__arrow {
+  visibility: hidden;
+  position: absolute;
+}
+.menu__arrow input[type="radio"] {
+  position: fixed;
+  top: -99999px;
+  left: -99999px;
+}
+.menu__arrow ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.menu__arrow--top {
+  top: 0.5em;
+  left: 220px;
+}
+.menu__arrow--top .arrow {
+  transform: rotate(-45deg);
+}
+.menu__arrow--left {
+  top: 220px;
+  left: 0.5em;
+}
+.menu__arrow--left .arrow {
+  transform: rotate(-135deg);
+}
+.arrow {
+  width: 20px;
+  height: 20px;
+  border-right: 6.666666666666667px solid #fa8072;
+  border-top: 6.666666666666667px solid #fa8072;
+  border-radius: 3px;
+  transition: border-color 0.3s;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.arrow:hover {
+  border-color: #9D9D93;
+  transition: border-color 0.3s;
+}
+.circle {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: rotate(108deg);
+  overflow: hidden;
+  list-style: none;
+}
+.circle li {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0 100%;
+}
+.circle li .placeholder {
+  position: absolute;
+  left: -100%;
+  padding-top: 1.5em;
+  width: 200%;
+  height: 200%;
+  text-align: center;
+  transform: skewY(54deg) rotate(18deg);
+}
+.circle li .placeholder .upside {
+  transform: rotate(180deg);
+}
+.circle li .placeholder a {
+  text-decoration: none;
+  pointer-events: auto;
+}
+.circle li .placeholder button {
+  pointer-events: auto;
+}
+.circle li .placeholder .button {
+  font-size: 2.3em;
+  background-color: transparent;
+  border: none;
+  color: #fa8072;/*salmon*/
+  cursor: pointer;
+}
+.circle li:nth-child(1) {
+  transform: rotate(0deg) skewY(-54deg);
+  background-color: #fff;
+}
+.circle li:nth-child(2) {
+  transform: rotate(36deg) skewY(-54deg);
+  background-color: #fff;
+}
+.circle li:nth-child(3) {
+  transform: rotate(72deg) skewY(-54deg);
+  background-color: #fff;
+}
+.circle li:nth-child(4) {
+  transform: rotate(108deg) skewY(-54deg);
+  background-color: #fff;
+}
+.circle li:nth-child(5) {
+  transform: rotate(144deg) skewY(-54deg);
+  background-color: #fff;
+}
+.circle li:nth-child(6) {
+  transform: rotate(180deg) skewY(-54deg);
+  background-color: #fff;
+}
+.circle li:nth-child(7) {
+  transform: rotate(216deg) skewY(-54deg);
+  background-color: #fff;
+}
+.circle li:nth-child(8) {
+  transform: rotate(252deg) skewY(-54deg);
+  background-color: #fff;
+}
+.circle li:nth-child(9) {
+  transform: rotate(288deg) skewY(-54deg);
+  background-color: #fff;
+}
+.circle li:nth-child(10) {
+  transform: rotate(324deg) skewY(-54deg);
+  background-color: #fff;/*crema*/
+}
+#menu__active {
+  position: fixed;
+  top: -99999px;
+  left: -99999px;
+}
+#menu__active:checked ~ label .menu__listings {
+  transform: rotate(10deg) scale(1);
+  transition: transform 1s;
+}
+#menu__active:checked ~ label .menu__toggle {
+  background-color: #fa8072 ;/*salmon*/
+  transition: all 1s;
+}
+#menu__active:checked ~ label .hamburger {
+  border-color: transparent;
+  transition: border-color 0.333333333333333s;
+}
+#menu__active:checked ~ label .hamburger:after {
+  top: -2px;
+  border-color: #9D9D93;/*gris*/
+  transform: translateX(-50%) rotate(45deg);
+  transition-property: top, transform;
+  transition-duration: 0.25s, 1s;
+}
+#menu__active:checked ~ label .hamburger:before {
+  bottom: -2px;
+  border-color: #9D9D93;
+  transform: translateX(-50%) rotate(-45deg);
+  transition-property: bottom, transform;
+  transition-duration: 0.25s, 1s;
+}
+#menu__active:checked ~ label .button:hover {
+  color: #9D9D93;/*gris*/
+}
+#menu__active:checked ~ label .menu__arrow {
+  visibility: visible;
+  transition: all 1s 1.111111111111111s;
+}
+#menu__active:checked ~ label .menu__arrow--top label {
+  display: none;
+}
+#menu__active:checked ~ label .menu__arrow--top label[for="degree--up-0"] {
+  display: block;
+}
+#menu__active:checked ~ label #degree--up-0:checked ~ .menu__listings {
+  transform: rotate(116deg);
+}
+#menu__active:checked ~ label #degree--up-0:checked ~ .menu__arrow--top label {
+  display: none;
+}
+#menu__active:checked ~ label #degree--up-0:checked ~ .menu__arrow--top label[for="degree--up-1"] {
+  display: block;
+}
+#menu__active:checked ~ label #degree--up-1:checked ~ .menu__listings {
+  transform: rotate(224deg);
+}
+#menu__active:checked ~ label #degree--up-1:checked ~ .menu__listings ~ .menu__arrow--top label {
+  display: none;
+}
+#menu__active:checked ~ label #degree--up-1:checked ~ .menu__listings ~ .menu__arrow--top label[for="degree--up-2"] {
+  display: block;
+}
